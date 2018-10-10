@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -e
+
+ENV_DIR=$3
+APP_NAME=`cat $ENV_DIR/HEROKU_APP_NAME`
+echo $APP_NAME > $ENV_DIR/HOST_NAME
+echo $APP_NAME.herokuapp.com > $ENV_DIR/HOST_ASSETS_BASE
