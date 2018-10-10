@@ -11,4 +11,4 @@ function topic() {
 APP_NAME=`cat $ENV_DIR/HEROKU_APP_NAME`
 topic "App Name is ${APP_NAME}. ENV Dir is ${ENV_DIR}."
 echo $APP_NAME > $ENV_DIR/HOST_NAME
-echo $APP_NAME.herokuapp.com > $ENV_DIR/HOST_ASSETS_BASE
+echo https://$APP_NAME.herokuapp.com > $ENV_DIR/HOST_ASSETS_BASE
