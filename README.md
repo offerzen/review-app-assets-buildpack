@@ -11,4 +11,4 @@ Looked into documentation and examples for buildpacks and got an understanding o
 Found that they are read from a tmp dir where each env var has it's own file. (eg `$HOSTNAME` would be in a file called `HOSTNAME`)
 
 ## The Solution
-Write our own env var files before they are read in.
+Write our own env var files before they are read in
