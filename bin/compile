@@ -14,3 +14,9 @@ echo $APP_NAME > $ENV_DIR/HOST_NAME
 echo https://$APP_NAME.herokuapp.com > $ENV_DIR/HOST_ASSETS_BASE
 HOST_ASSETS_BASE_VAR=`cat $ENV_DIR/HOST_ASSETS_BASE`
 topic "HOST_ASSETS_BASE is ${HOST_ASSETS_BASE_VAR}"
+
+# Create ~/.npmrc file
+topic "Generating ~/.npmrc file"
+echo "@offerzen:registry=https://npm.pkg.github.com" > ~/.npmrc
+echo "//npm.pkg.github.com/:_authToken=$NPM_AUTH_TOKEN" >> ~/.npmrc
+topic "Created ~/.npmrc file"
